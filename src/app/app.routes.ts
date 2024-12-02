@@ -5,6 +5,8 @@ import { SignInComponent } from './sign-in/sign-in.component'
 import { CreateComponent } from './dashboard/quotes/create/create.component'
 import { PendingComponent } from './dashboard/quotes/pending/pending.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { ApprovedComponent } from './dashboard/quotes/approved/approved.component'
+import { RejectedComponent } from './dashboard/quotes/rejected/rejected.component'
 
 export const routes: Routes = [
   {
@@ -31,8 +33,16 @@ export const routes: Routes = [
             component: AllComponent,
           },
           {
+            path: 'approved',
+            component: ApprovedComponent,
+          },
+          {
             path: 'pending',
             component: PendingComponent,
+          },
+          {
+            path: 'rejected',
+            component: RejectedComponent,
           },
         ],
       },

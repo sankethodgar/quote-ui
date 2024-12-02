@@ -45,10 +45,12 @@ export type ChartOptions = {
         </div>
       </div>
     </div>
-    <div class="mt-5 p-4 flex flex-col bg-white border shadow-sm rounded-xl">
+    <div class="mt-5 pt-4 flex flex-col bg-white border shadow-sm rounded-xl">
       <div class="flex justify-between items-center">
         <div>
-          <p class="text-xl sm:text-2xl font-medium text-gray-800">Insights</p>
+          <p class="pl-4 text-xl sm:text-2xl font-medium text-gray-800">
+            Insights
+          </p>
         </div>
       </div>
       <div id="hs-single-area-chart">

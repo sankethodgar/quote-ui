@@ -2,10 +2,12 @@ import { NgFor } from '@angular/common'
 import { Component } from '@angular/core'
 
 @Component({
-  selector: 'app-all',
+  selector: 'app-approved',
   imports: [NgFor],
   template: `
-    <h2 class="text-xl font-semibold text-gray-800 mb-5 ml-1">All Quotes</h2>
+    <h2 class="text-xl font-semibold text-gray-800 mb-5 ml-1">
+      Approved Quotes
+    </h2>
     <div class="flex flex-col">
       <div class="-m-1.5 overflow-x-auto">
         <div class="p-1.5 min-w-full inline-block align-middle">
@@ -115,7 +117,7 @@ import { Component } from '@angular/core'
     </div>
   `,
 })
-export class AllComponent {
+export class ApprovedComponent {
   quotes: any[] = [
     {
       id: 1001,
@@ -133,7 +135,7 @@ export class AllComponent {
       validTo: '2024-07-31',
       country: 'UK',
       currency: 'GBP',
-      status: 'pending',
+      status: 'approved',
     },
     {
       id: 1003,
@@ -142,7 +144,7 @@ export class AllComponent {
       validTo: '2024-08-31',
       country: 'Germany',
       currency: 'EUR',
-      status: 'rejected',
+      status: 'approved',
     },
   ]
 
