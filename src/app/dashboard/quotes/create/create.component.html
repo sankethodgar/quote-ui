@@ -417,37 +417,34 @@
             class="mb-5 py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
             aria-haspopup="dialog"
             aria-expanded="false"
-            aria-controls="hs-scroll-inside-body-modal"
-            data-hs-overlay="#hs-scroll-inside-body-modal"
+            aria-controls="hs-large-modal"
+            data-hs-overlay="#hs-large-modal"
           >
-            Add Material
+            Add Item
           </button>
         </div>
         <div
-          id="hs-scroll-inside-body-modal"
+          id="hs-large-modal"
           class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
           role="dialog"
           tabindex="-1"
-          aria-labelledby="hs-scroll-inside-body-modal-label"
+          aria-labelledby="hs-large-modal-label"
         >
           <div
-            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto"
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all lg:max-w-4xl lg:w-full m-3 lg:mx-auto"
           >
             <div
-              class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto"
+              class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto"
             >
               <div class="flex justify-between items-center py-3 px-4 border-b">
-                <h3
-                  id="hs-scroll-inside-body-modal-label"
-                  class="font-bold text-gray-800"
-                >
-                  Add New Material
+                <h3 id="hs-large-modal-label" class="font-bold text-gray-800">
+                  Add Item
                 </h3>
                 <button
                   type="button"
                   class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
                   aria-label="Close"
-                  data-hs-overlay="#hs-scroll-inside-body-modal"
+                  data-hs-overlay="#hs-large-modal"
                 >
                   <span class="sr-only">Close</span>
                   <svg
@@ -467,146 +464,167 @@
                   </svg>
                 </button>
               </div>
-              <div class="p-4 overflow-y-auto">
-                <form>
-                  <div class="space-y-2">
-                    <div class="flex flex-col">
-                      <label for="item" class="font-medium text-gray-700 mb-1"
-                        >Item</label
-                      >
-                      <input
-                        type="text"
-                        placeholder="Enter Item"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
+              <form class="p-4">
+                <div class="space-y-2">
+                  <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="mx-4">
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="material-number"
+                          class="font-medium text-gray-700 mb-1"
+                          >Material Number</label
+                        >
+                        <input
+                          type="text"
+                          id="material-number"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label class="font-medium text-gray-700 mb-1"
+                          >Material Description</label
+                        >
+                        <input
+                          type="text"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          placeholder="Enter Material Description"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="per-price"
+                          class="font-medium text-gray-700 mb-1"
+                          >Per Price</label
+                        >
+                        <input
+                          type="number"
+                          id="per-price"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="per-price"
+                          class="font-medium text-gray-700 mb-1"
+                          >Per</label
+                        >
+                        <input
+                          type="number"
+                          id="per"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label for="uom" class="font-medium text-gray-700 mb-1"
+                          >UOM</label
+                        >
+                        <input
+                          type="text"
+                          id="uom"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
                     </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="material-number"
-                        class="font-medium text-gray-700 mb-1"
-                        >Material Number</label
-                      >
-                      <input
-                        type="text"
-                        id="material-number"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
+                    <div class="mx-4">
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="discount-value"
+                          class="font-medium text-gray-700 mb-1"
+                          >Discount Value</label
+                        >
+                        <input
+                          type="number"
+                          id="discount-value"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="surcharge-value"
+                          class="font-medium text-gray-700 mb-1"
+                          >Surcharge Value</label
+                        >
+                        <input
+                          type="number"
+                          id="surcharge-value"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="order-quantity"
+                          class="font-medium text-gray-700 mb-1"
+                          >Order Quantity</label
+                        >
+                        <input
+                          type="number"
+                          id="order-quantity"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="order-value"
+                          class="font-medium text-gray-700 mb-1"
+                          >Order Value</label
+                        >
+                        <input
+                          type="number"
+                          id="order-value"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="item-text"
+                          class="font-medium text-gray-700 mb-1"
+                          >Item Text</label
+                        >
+                        <input
+                          type="number"
+                          id="item-text"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        />
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="item-text"
+                          class="font-medium text-gray-700 mb-1"
+                          >Usage</label
+                        >
+                        <select
+                          id="usage"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        >
+                          <option value="regular">AP0</option>
+                          <option value="regular">AP1</option>
+                        </select>
+                      </div>
+                      <div class="flex flex-col mt-2">
+                        <label
+                          for="item-text"
+                          class="font-medium text-gray-700 mb-1"
+                          >Project Id</label
+                        >
+                        <select
+                          id="usage"
+                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        >
+                          <option value="regular">1</option>
+                          <option value="regular">2</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="flex flex-col">
-                      <label class="font-medium text-gray-700 mb-1"
-                        >Material Description</label
-                      >
-                      <input
-                        type="text"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        placeholder="Enter Material Description"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="per-price"
-                        class="font-medium text-gray-700 mb-1"
-                        >Per Price</label
-                      >
-                      <input
-                        type="number"
-                        id="per-price"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label for="uom" class="font-medium text-gray-700 mb-1"
-                        >UOM</label
-                      >
-                      <input
-                        type="text"
-                        id="uom"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="discount-value"
-                        class="font-medium text-gray-700 mb-1"
-                        >Discount Value</label
-                      >
-                      <input
-                        type="number"
-                        id="discount-value"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="surcharge-value"
-                        class="font-medium text-gray-700 mb-1"
-                        >Surcharge Value</label
-                      >
-                      <input
-                        type="number"
-                        id="surcharge-value"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="order-quantity"
-                        class="font-medium text-gray-700 mb-1"
-                        >Order Quantity</label
-                      >
-                      <input
-                        type="number"
-                        id="order-quantity"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="order-value"
-                        class="font-medium text-gray-700 mb-1"
-                        >Order Value</label
-                      >
-                      <input
-                        type="number"
-                        id="order-value"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      />
-                    </div>
-                    <div class="flex flex-col">
-                      <label
-                        for="item-text"
-                        class="font-medium text-gray-700 mb-1"
-                        >Item Text</label
-                      >
-                      <textarea
-                        id="item-text"
-                        rows="3"
-                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                      ></textarea>
-                    </div>
-                    <!-- <div class="flex flex-col">
-                      <label for="usage" class="font-medium text-gray-700 mb-1"
-                        >Usage</label
-                      >
-                      <select
-                        id="usage"
-                        class="border rounded py-1.5 px-2.5 text-gray-800"
-                      >
-                        <option value="regular">Regular</option>
-                        <option value="urgent">Urgent</option>
-                        <option value="backup">Backup</option>
-                      </select>
-                    </div> -->
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
               <div
                 class="flex justify-end items-center gap-x-2 py-3 px-4 border-t"
               >
                 <button
                   type="button"
                   class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                  data-hs-overlay="#hs-scroll-inside-body-modal"
+                  data-hs-overlay="#hs-large-modal"
                 >
                   Close
                 </button>
@@ -614,12 +632,13 @@
                   type="button"
                   class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                 >
-                  Save Changes
+                  Save changes
                 </button>
               </div>
             </div>
           </div>
         </div>
+
         <div class="flex flex-col">
           <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
