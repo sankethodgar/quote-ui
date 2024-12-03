@@ -121,10 +121,100 @@
     >
       <div class="p-4 border border-gray-200 rounded-xl">
         <div class="p-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 mb-10 gap-6">
+            <div class="max-w-sm">
+              <label for="input-label" class="block font-medium mb-2"
+                >SAP Quotation No.</label
+              >
+              <input
+                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Sap Quotation No."
+              />
+            </div>
+            <div class="max-w-sm">
+              <label for="input-label" class="block font-medium mb-2"
+                >Rivision No.</label
+              >
+              <input
+                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Rivision No."
+              />
+            </div>
+            <div class="max-w-sm">
+              <label for="input-label" class="block font-medium mb-2"
+                >Creation Date</label
+              >
+              <input
+                type="date"
+                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+            <div class="max-w-sm">
+              <label for="input-label" class="block font-medium mb-2"
+                >Customer Enquiry No.</label
+              >
+              <input
+                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder="Customer Enquiry No."
+              />
+            </div>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-6">
               <div class="grid grid-cols-2 items-center gap-4">
-                <label class="font-bold">Customer</label>
+                <label class="font-medium">Customer</label>
+                <input
+                  class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="Search Customer"
+                />
+                <label>Customer Name 1</label>
+                <input
+                  type="text"
+                  placeholder="Name 1"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+                <label>Customer Name 2</label>
+                <input
+                  type="text"
+                  placeholder="Name 2"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+                <label>House & Street Name</label>
+                <input
+                  type="text"
+                  placeholder="House & Street Name"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+              </div>
+              <div class="mt-6 grid grid-cols-2 items-center gap-4">
+                <label class="font-medium">Ship-to</label>
+                <input
+                  class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="Search Customer"
+                />
+                <label>Customer Name 1</label>
+                <input
+                  type="text"
+                  placeholder="Name 1"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+                <label>Customer Name 2</label>
+                <input
+                  type="text"
+                  placeholder="Name 2"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+                <label>House & Street Name</label>
+                <input
+                  type="text"
+                  placeholder="House & Street Name"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                />
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="grid grid-cols-2 items-center gap-4 pl-4">
+                <label class="font-medium">Cust Price Proc</label>
                 <select
                   data-hs-select='{
                     "hasSearch": true,
@@ -142,113 +232,138 @@
                   class="hidden"
                 >
                   <option value="">Choose</option>
-                  <option value="1">Customer 1</option>
-                  <option value="2">Customer 2</option>
-                  <option value="3">Customer 3</option>
+                  <option value="1">Is VAT Inclusive</option>
+                  <option value="2">Is VAT Exclusive</option>
                 </select>
-                <label>Customer Name 1</label>
+                <label class="font-medium">Payment Term</label>
                 <input
                   type="text"
-                  placeholder="Fetched from Customer master"
-                  class="w-full rounded border border-gray-300 bg-gray-100 p-2"
-                  disabled
+                  placeholder="Payment Term"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label>Customer Name 2</label>
+                <label class="font-medium">Trading Currency</label>
                 <input
                   type="text"
-                  placeholder="Fetched from Customer master"
-                  class="w-full rounded border border-gray-300 bg-gray-100 p-2"
-                  disabled
+                  placeholder="Trading Currency"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label>House & Street Name</label>
+                <label class="font-medium">Incoterm</label>
                 <input
                   type="text"
-                  class="w-full rounded border border-gray-300 p-2"
+                  placeholder="Incoterm"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-              </div>
-
-              <!-- Ship-to Section -->
-              <div class="mt-6 grid grid-cols-2 items-center gap-4">
-                <label class="font-bold">Ship-to</label>
+                <label class="font-medium">Incoterm (Port)</label>
                 <input
                   type="text"
-                  placeholder="Enter or search via Name 1 / search term"
-                  class="w-full rounded border border-gray-300 p-2"
+                  placeholder="Incoterm (Port)"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label>Customer Name 1</label>
+                <label class="font-medium">Delivery Date</label>
                 <input
-                  type="text"
-                  placeholder="Fetched from Customer master"
-                  class="w-full rounded border border-gray-300 bg-gray-100 p-2"
-                  disabled
+                  type="date"
+                  class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label>Customer Name 2</label>
+                <label class="font-medium mt-5">Valid From Date</label>
                 <input
-                  type="text"
-                  placeholder="Fetched from Customer master"
-                  class="w-full rounded border border-gray-300 bg-gray-100 p-2"
-                  disabled
+                  type="date"
+                  class="mt-5 py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label>House & Street Name</label>
+                <label class="font-medium">Valid To Date</label>
                 <input
-                  type="text"
-                  class="w-full rounded border border-gray-300 p-2"
+                  type="date"
+                  class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
               </div>
             </div>
-
-            <!-- Right Column: Additional Information -->
+          </div>
+          <div class="w-full mt-5">
+            <label for="textarea-label" class="block font-medium mb-2"
+              >Header Text</label
+            >
+            <textarea
+              class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
+              rows="3"
+              placeholder="Header Text ..."
+            ></textarea>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
             <div class="space-y-6">
-              <div class="grid grid-cols-2 items-center gap-4 p-4">
-                <!-- Left Side -->
-                <label class="font-bold">Cust Price Proc</label>
-                <div class="rounded p-2">Will show if VAT tax</div>
-
-                <label class="font-bold">Payment Term</label>
-                <div class="rounded p-2">
-                  Shall fetch the data content from Customer master with result
-                  from "Customer"<br />
-                  Changes are possible
+              <div class="grid grid-cols-2 items-center gap-4">
+                <label class="font-medium"
+                  >Selection for Material details to be printed</label
+                >
+                <div class="space-y-1 mt-5">
+                  <div class="flex">
+                    <input
+                      type="radio"
+                      name="hs-default-radio"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                      id="hs-default-radio"
+                    />
+                    <label for="hs-default-radio" class="text-sm ms-2"
+                      >Full Material Description</label
+                    >
+                  </div>
+                  <div class="flex">
+                    <input
+                      type="radio"
+                      name="hs-default-radio"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                      id="hs-checked-radio"
+                      checked=""
+                    />
+                    <label for="hs-checked-radio" class="text-sm ms-2"
+                      >4 Digit Description (Text)</label
+                    >
+                  </div>
+                  <div class="flex">
+                    <input
+                      type="radio"
+                      name="hs-default-radio"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                      id="hs-checked-radio"
+                      checked=""
+                    />
+                    <label for="hs-checked-radio" class="text-sm ms-2"
+                      >Basic Material (Text)</label
+                    >
+                  </div>
+                  <div class="flex">
+                    <input
+                      type="radio"
+                      name="hs-default-radio"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                      id="hs-checked-radio"
+                      checked=""
+                    />
+                    <label for="hs-checked-radio" class="text-sm ms-2"
+                      >Drawing #</label
+                    >
+                  </div>
                 </div>
-
-                <label class="font-bold">Trading Currency</label>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="grid grid-cols-2 items-center gap-4">
+                <label class="font-medium">Sales Person</label>
                 <input
                   type="text"
-                  class="w-full rounded border border-gray-300 p-2"
+                  placeholder="Sales Person"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label class="font-bold">Incoterm</label>
+                <label class="font-medium">Email</label>
                 <input
                   type="text"
-                  class="w-full rounded border border-gray-300 p-2"
+                  placeholder="Email Address"
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <label class="font-bold">Incoterm (Port)</label>
-                <div class="rounded p-2">
-                  Fetch from Predefined Field (Changeable)
-                </div>
-
-                <label class="font-bold">Delivery Date</label>
+                <label class="font-medium">Phone</label>
                 <input
-                  type="date"
-                  class="w-full rounded border border-gray-300 p-2"
+                  type="text"
+                  placeholder="Phone No."
+                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                 />
-
-                <!-- Right Side -->
-                <label class="font-bold">Valid From Date</label>
-                <div class="rounded p-2">
-                  DDMMYYYY - Default from today (changeable)
-                </div>
-
-                <label class="font-bold">Valid To Date</label>
-                <div class="rounded p-2">
-                  DDMMYYYY - Default + 1 month (changeable)
-                </div>
               </div>
             </div>
           </div>
