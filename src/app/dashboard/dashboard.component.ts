@@ -50,7 +50,7 @@ import {
           <div class="flex flex-row items-center justify-end gap-1">
             <button
               type="button"
-              class="flex shrink-0 justify-center items-center gap-2 p-1 px-2 text-sm rounded-md border border-transparent bg-blue-500 text-white focus:outline-none"
+              class="flex shrink-0 justify-center items-center gap-2 p-1 px-2 text-sm rounded-md border border-transparent bg-blue-600 text-white focus:outline-none"
             >
               Sign Out
               <svg
@@ -98,8 +98,8 @@ import {
               <ul class="flex flex-col space-y-1">
                 <li>
                   <a
-                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-grey-800 hover:text-white rounded-lg hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
-                    [ngClass]="{ 'bg-blue-500 text-white': isActive('home') }"
+                    class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-grey-800 hover:text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                    [ngClass]="{ 'bg-blue-600 text-white': isActive('home') }"
                     [routerLink]="['/home']"
                   >
                     <svg
@@ -124,9 +124,9 @@ import {
                 </li>
                 <li>
                   <a
-                    class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-500"
+                    class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-600"
                     [ngClass]="{
-                      'bg-blue-500 text-white': isActive('quotes/create')
+                      'bg-blue-600 text-white': isActive('quotes/create')
                     }"
                     [routerLink]="['/quotes/create']"
                   >
@@ -152,7 +152,7 @@ import {
                 <li class="hs-accordion" id="users-accordion">
                   <button
                     type="button"
-                    class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 hover:text-white rounded-lg hover:bg-blue-500"
+                    class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-800 hover:text-white rounded-lg hover:bg-blue-600"
                     aria-expanded="true"
                     aria-controls="users-accordion-child"
                   >
@@ -216,9 +216,9 @@ import {
                     <ul class="ps-8 pt-1 space-y-1">
                       <li>
                         <a
-                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-500"
+                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-600"
                           [ngClass]="{
-                            'bg-blue-500 text-white': isActive('quotes/all')
+                            'bg-blue-600 text-white': isActive('quotes/all')
                           }"
                           [routerLink]="['/quotes/all']"
                         >
@@ -227,9 +227,9 @@ import {
                       </li>
                       <li>
                         <a
-                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-500"
+                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-600"
                           [ngClass]="{
-                            'bg-blue-500 text-white':
+                            'bg-blue-600 text-white':
                               isActive('quotes/approved')
                           }"
                           [routerLink]="['/quotes/approved']"
@@ -239,9 +239,9 @@ import {
                       </li>
                       <li>
                         <a
-                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-500"
+                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-600"
                           [ngClass]="{
-                            'bg-blue-500 text-white': isActive('quotes/pending')
+                            'bg-blue-600 text-white': isActive('quotes/pending')
                           }"
                           [routerLink]="['/quotes/pending']"
                         >
@@ -250,9 +250,9 @@ import {
                       </li>
                       <li>
                         <a
-                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-500"
+                          class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm hover:text-white rounded-lg hover:bg-blue-600"
                           [ngClass]="{
-                            'bg-blue-500 text-white':
+                            'bg-blue-600 text-white':
                               isActive('quotes/rejected')
                           }"
                           [routerLink]="['/quotes/rejected']"

@@ -144,7 +144,7 @@ import { Component } from '@angular/core'
       <div class="flex items-center gap-x-.5">
         <button
           type="button"
-          class="flex justify-center items-center bg-blue-500 text-white py-2 px-3 text-sm rounded-lg"
+          class="flex justify-center items-center bg-blue-600 text-white py-2 px-3 text-sm rounded-lg"
           aria-current="page"
         >
           1
