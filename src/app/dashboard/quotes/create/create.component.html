@@ -217,10 +217,6 @@
                 <label class="font-medium">Cust Price Proc</label>
                 <select
                   data-hs-select='{
-                    "hasSearch": true,
-                    "searchPlaceholder": "Search...",
-                    "searchClasses": "block w-full text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-1.5 px-2.5",
-                    "searchWrapperClasses": "bg-white p-1.5 -mx-1 sticky top-0",
                     "placeholder": "Select option...",
                     "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
                     "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 px-3 pe-9 flex text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1]",
@@ -376,10 +372,389 @@
          }'
       style="display: none"
     >
-      <div
-        class="p-4 h-48 bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl"
-      >
-        <h3 class="text-gray-500">Second content</h3>
+      <div class="p-4 border border-gray-200 rounded-xl">
+        <div class="flex justify-end">
+          <button
+            type="button"
+            class="mb-5 py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+            aria-controls="hs-scroll-inside-body-modal"
+            data-hs-overlay="#hs-scroll-inside-body-modal"
+          >
+            Add Material
+          </button>
+        </div>
+        <div
+          id="hs-scroll-inside-body-modal"
+          class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+          role="dialog"
+          tabindex="-1"
+          aria-labelledby="hs-scroll-inside-body-modal-label"
+        >
+          <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 h-[calc(100%-3.5rem)] sm:mx-auto"
+          >
+            <div
+              class="max-h-full overflow-hidden flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto"
+            >
+              <div class="flex justify-between items-center py-3 px-4 border-b">
+                <h3
+                  id="hs-scroll-inside-body-modal-label"
+                  class="font-bold text-gray-800"
+                >
+                  Add New Material
+                </h3>
+                <button
+                  type="button"
+                  class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                  aria-label="Close"
+                  data-hs-overlay="#hs-scroll-inside-body-modal"
+                >
+                  <span class="sr-only">Close</span>
+                  <svg
+                    class="shrink-0 size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="p-4 overflow-y-auto">
+                <form>
+                  <div class="space-y-2">
+                    <div class="flex flex-col">
+                      <label for="item" class="font-medium text-gray-700 mb-1"
+                        >Item</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="Enter Item"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="material-number"
+                        class="font-medium text-gray-700 mb-1"
+                        >Material Number</label
+                      >
+                      <input
+                        type="text"
+                        id="material-number"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label class="font-medium text-gray-700 mb-1"
+                        >Material Description</label
+                      >
+                      <input
+                        type="text"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                        placeholder="Enter Material Description"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="per-price"
+                        class="font-medium text-gray-700 mb-1"
+                        >Per Price</label
+                      >
+                      <input
+                        type="number"
+                        id="per-price"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label for="uom" class="font-medium text-gray-700 mb-1"
+                        >UOM</label
+                      >
+                      <input
+                        type="text"
+                        id="uom"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="discount-value"
+                        class="font-medium text-gray-700 mb-1"
+                        >Discount Value</label
+                      >
+                      <input
+                        type="number"
+                        id="discount-value"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="surcharge-value"
+                        class="font-medium text-gray-700 mb-1"
+                        >Surcharge Value</label
+                      >
+                      <input
+                        type="number"
+                        id="surcharge-value"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="order-quantity"
+                        class="font-medium text-gray-700 mb-1"
+                        >Order Quantity</label
+                      >
+                      <input
+                        type="number"
+                        id="order-quantity"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="order-value"
+                        class="font-medium text-gray-700 mb-1"
+                        >Order Value</label
+                      >
+                      <input
+                        type="number"
+                        id="order-value"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div class="flex flex-col">
+                      <label
+                        for="item-text"
+                        class="font-medium text-gray-700 mb-1"
+                        >Item Text</label
+                      >
+                      <textarea
+                        id="item-text"
+                        rows="3"
+                        class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                      ></textarea>
+                    </div>
+                    <!-- <div class="flex flex-col">
+                      <label for="usage" class="font-medium text-gray-700 mb-1"
+                        >Usage</label
+                      >
+                      <select
+                        id="usage"
+                        class="border rounded py-1.5 px-2.5 text-gray-800"
+                      >
+                        <option value="regular">Regular</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="backup">Backup</option>
+                      </select>
+                    </div> -->
+                  </div>
+                </form>
+              </div>
+              <div
+                class="flex justify-end items-center gap-x-2 py-3 px-4 border-t"
+              >
+                <button
+                  type="button"
+                  class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                  data-hs-overlay="#hs-scroll-inside-body-modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div class="-m-1.5 overflow-x-auto">
+            <div class="p-1.5 min-w-full inline-block align-middle">
+              <div class="border rounded-lg overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Item
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Material Number
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Material Description
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Per Price
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Per
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        UOM
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Discount Value
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Surcharge Value
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Order Quantity
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Order Value
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Item Text
+                      </th>
+                      <!-- <th
+                        scope="col"
+                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Usage
+                      </th> -->
+                      <th
+                        scope="col"
+                        class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase"
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <!-- Example Row -->
+                    <tr>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"
+                      >
+                        1
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        MAT123456
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        Material Description
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        $100.00
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        Each
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        Piece
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        $10.00
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        $5.00
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        10
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        $150.00
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        This is item text
+                      </td>
+                      <!-- <td
+                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                      >
+                        <select
+                          class="text-sm text-gray-800 border rounded px-2 py-1"
+                        >
+                          <option value="regular">Regular</option>
+                          <option value="urgent">Urgent</option>
+                          <option value="backup">Backup</option>
+                        </select>
+                      </td> -->
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"
+                      >
+                        <button
+                          type="button"
+                          class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none"
+                        >
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
