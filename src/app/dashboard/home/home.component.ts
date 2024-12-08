@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http'
+import { environment } from '../../../environments/environment'
 import { CommonModule } from '@angular/common'
-import { Component, ViewChild } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -27,26 +29,32 @@ export type ChartOptions = {
   imports: [CommonModule, NgApexchartsModule],
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
-  stats = [
-    { label: 'Draft', value: '1,000' },
-    { label: 'Submitted for approval', value: '2,000' },
-    { label: 'Approved', value: '3,000' },
-    { label: 'Rejected', value: '4,000' },
-    { label: 'Submitted to customer', value: '5,000' },
-    { label: 'Won', value: '6,000' },
-    { label: 'Loss', value: '7,000' },
-    { label: 'Cancelled', value: '8,000' },
-  ]
+export class HomeComponent implements OnInit {
+  loading = true
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get(`${environment.apiUrl}/stats`).subscribe((data) => {
+      const responseData = data as any
+      this.stats = responseData.overview.map((item: any) => ({
+        label: item.label,
+        value: item.value,
+      }))
+      this.chartOptions.series = [
+        {
+          name: 'Quotes',
+          data: responseData.month,
+        },
+      ]
+      this.loading = false
+    })
+  }
+
+  stats: any = []
 
   @ViewChild(ChartComponent) chart!: ChartComponent
   public chartOptions: ChartOptions = {
-    series: [
-      {
-        name: 'Quotes',
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 100, 150, 200],
-      },
-    ],
+    series: [],
     chart: {
       height: 300,
       type: 'area',

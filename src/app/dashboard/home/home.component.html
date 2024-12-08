@@ -1,36 +1,47 @@
-<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-  <div
-    *ngFor="let stat of stats"
-    class="flex flex-col bg-white border shadow-sm rounded-xl"
-  >
-    <div class="p-4 md:p-5">
-      <div class="flex items-center gap-x-2">
-        <p class="text-xs uppercase tracking-wide text-gray-500">
-          {{ stat.label }}
+<div
+  *ngIf="loading; else content"
+  class="flex justify-center items-center mt-[22%]"
+>
+  <p class="text-lg">Loading...</p>
+</div>
+
+<ng-template #content>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+    <div
+      *ngFor="let stat of stats"
+      class="flex flex-col bg-white border shadow-sm rounded-xl"
+    >
+      <div class="p-4 md:p-5">
+        <div class="flex items-center gap-x-2">
+          <p class="text-xs uppercase tracking-wide text-gray-500">
+            {{ stat.label }}
+          </p>
+        </div>
+        <div class="mt-1 flex items-center gap-x-2">
+          <h3 class="text-xl sm:text-2xl font-medium text-gray-800">
+            {{ stat.value }}
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 pt-4 flex flex-col bg-white border shadow-sm rounded-xl">
+    <div class="flex justify-between items-center">
+      <div>
+        <p class="pl-4 text-xl sm:text-2xl font-medium text-gray-800">
+          Insights
         </p>
       </div>
-      <div class="mt-1 flex items-center gap-x-2">
-        <h3 class="text-xl sm:text-2xl font-medium text-gray-800">
-          {{ stat.value }}
-        </h3>
-      </div>
+    </div>
+    <div id="hs-single-area-chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [stroke]="chartOptions.stroke"
+      ></apx-chart>
     </div>
   </div>
-</div>
-<div class="mt-5 pt-4 flex flex-col bg-white border shadow-sm rounded-xl">
-  <div class="flex justify-between items-center">
-    <div>
-      <p class="pl-4 text-xl sm:text-2xl font-medium text-gray-800">Insights</p>
-    </div>
-  </div>
-  <div id="hs-single-area-chart">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [xaxis]="chartOptions.xaxis"
-      [dataLabels]="chartOptions.dataLabels"
-      [grid]="chartOptions.grid"
-      [stroke]="chartOptions.stroke"
-    ></apx-chart>
-  </div>
-</div>
+</ng-template>

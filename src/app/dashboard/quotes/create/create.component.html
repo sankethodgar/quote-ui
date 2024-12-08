@@ -1,260 +1,323 @@
-<div data-hs-stepper="">
-  <ul class="relative flex flex-row gap-x-2 ml-[7%]">
-    <li
-      class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
-      data-hs-stepper-nav-item='{
+<div
+  *ngIf="loading; else content"
+  class="flex justify-center items-center mt-[22%]"
+>
+  <p class="text-lg">Loading...</p>
+</div>
+
+<ng-template #content>
+  <div data-hs-stepper="">
+    <ul class="relative flex flex-row gap-x-2 ml-[7%]">
+      <li
+        class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
+        data-hs-stepper-nav-item='{
          "index": 1
          }'
-    >
-      <span
-        class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
       >
         <span
-          class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+          class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
         >
-          <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
-            >1</span
+          <span
+            class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
           >
-          <svg
-            class="hidden shrink-0 size-3 hs-stepper-success:block"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+              >1</span
+            >
+            <svg
+              class="hidden shrink-0 size-3 hs-stepper-success:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-gray-800">
+            Basic Details
+          </span>
         </span>
-        <span class="ms-2 text-sm font-medium text-gray-800">
-          Basic Details
-        </span>
-      </span>
-      <div
-        class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-      ></div>
-    </li>
-    <li
-      class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
-      data-hs-stepper-nav-item='{
+        <div
+          class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
+        ></div>
+      </li>
+      <li
+        class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
+        data-hs-stepper-nav-item='{
          "index": 2
          }'
-    >
-      <span
-        class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
       >
         <span
-          class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+          class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
         >
-          <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
-            >2</span
+          <span
+            class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
           >
-          <svg
-            class="hidden shrink-0 size-3 hs-stepper-success:block"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+              >2</span
+            >
+            <svg
+              class="hidden shrink-0 size-3 hs-stepper-success:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-gray-800">
+            Item Details
+          </span>
         </span>
-        <span class="ms-2 text-sm font-medium text-gray-800">
-          Item Details
-        </span>
-      </span>
-      <div
-        class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-      ></div>
-    </li>
-    <li
-      class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
-      data-hs-stepper-nav-item='{
+        <div
+          class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
+        ></div>
+      </li>
+      <li
+        class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
+        data-hs-stepper-nav-item='{
          "index": 3
          }'
-    >
-      <span
-        class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
       >
         <span
-          class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+          class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
         >
-          <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
-            >3</span
+          <span
+            class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
           >
-          <svg
-            class="hidden shrink-0 size-3 hs-stepper-success:block"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+              >3</span
+            >
+            <svg
+              class="hidden shrink-0 size-3 hs-stepper-success:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-gray-800"> Output </span>
         </span>
-        <span class="ms-2 text-sm font-medium text-gray-800"> Output </span>
-      </span>
-      <div
-        class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-      ></div>
-    </li>
-    <li
-      class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
-      data-hs-stepper-nav-item='{
+        <div
+          class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
+        ></div>
+      </li>
+      <li
+        class="flex items-center gap-x-2 shrink basis-0 flex-1 group"
+        data-hs-stepper-nav-item='{
          "index": 4
          }'
-    >
-      <span
-        class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
       >
         <span
-          class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+          class="min-w-7 min-h-7 group inline-flex items-center text-xs align-middle"
         >
-          <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
-            >4</span
+          <span
+            class="size-7 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
           >
-          <svg
-            class="hidden shrink-0 size-3 hs-stepper-success:block"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
+            <span class="hs-stepper-success:hidden hs-stepper-completed:hidden"
+              >4</span
+            >
+            <svg
+              class="hidden shrink-0 size-3 hs-stepper-success:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="ms-2 text-sm font-medium text-gray-800">
+            Submission / Status
+          </span>
         </span>
-        <span class="ms-2 text-sm font-medium text-gray-800">
-          Submission / Status
-        </span>
-      </span>
+        <div
+          class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
+        ></div>
+      </li>
+    </ul>
+    <div class="mt-5 sm:mt-8">
       <div
-        class="w-full h-px flex-1 bg-gray-200 group-last:hidden hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-      ></div>
-    </li>
-  </ul>
-  <div class="mt-5 sm:mt-8">
-    <div
-      data-hs-stepper-content-item='{
+        data-hs-stepper-content-item='{
             "index": 1
           }'
-    >
-      <div class="p-4 border border-gray-200 rounded-xl">
-        <div class="p-4">
-          <div class="grid grid-cols-1 md:grid-cols-4 mb-10 gap-6">
-            <div class="max-w-sm">
-              <label for="input-label" class="block font-medium mb-2"
-                >SAP Quotation No.</label
-              >
-              <input
-                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Sap Quotation No."
-              />
-            </div>
-            <div class="max-w-sm">
-              <label for="input-label" class="block font-medium mb-2"
-                >Rivision No.</label
-              >
-              <input
-                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Rivision No."
-              />
-            </div>
-            <div class="max-w-sm">
-              <label for="input-label" class="block font-medium mb-2"
-                >Creation Date</label
-              >
-              <input
-                type="date"
-                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-              />
-            </div>
-            <div class="max-w-sm">
-              <label for="input-label" class="block font-medium mb-2"
-                >Customer Enquiry No.</label
-              >
-              <input
-                class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                placeholder="Customer Enquiry No."
-              />
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="space-y-6">
-              <div class="grid grid-cols-2 items-center gap-4">
-                <label class="font-medium">Customer</label>
+      >
+        <div class="p-4 border border-gray-200 rounded-xl">
+          <div class="p-2">
+            <div class="grid grid-cols-1 md:grid-cols-4 mb-10 gap-6">
+              <div class="max-w-sm">
+                <label for="input-label" class="block font-medium mb-2"
+                  >SAP Quotation No.</label
+                >
                 <input
                   class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Search Customer"
-                />
-                <label>Customer Name 1</label>
-                <input
-                  type="text"
-                  placeholder="Name 1"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label>Customer Name 2</label>
-                <input
-                  type="text"
-                  placeholder="Name 2"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label>House & Street Name</label>
-                <input
-                  type="text"
-                  placeholder="House & Street Name"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  placeholder="Sap Quotation No."
                 />
               </div>
-              <div class="mt-6 grid grid-cols-2 items-center gap-4">
-                <label class="font-medium">Ship-to</label>
+              <div class="max-w-sm">
+                <label for="input-label" class="block font-medium mb-2"
+                  >Rivision No.</label
+                >
                 <input
                   class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Search Customer"
+                  placeholder="Rivision No."
+                  value="00"
+                  disabled
                 />
-                <label>Customer Name 1</label>
+              </div>
+              <div class="max-w-sm">
+                <label for="input-label" class="block font-medium mb-2"
+                  >Creation Date</label
+                >
                 <input
-                  type="text"
-                  placeholder="Name 1"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  type="date"
+                  class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                  [value]="today | date : 'yyyy-MM-dd'"
                 />
-                <label>Customer Name 2</label>
+              </div>
+              <div class="max-w-sm">
+                <label for="input-label" class="block font-medium mb-2"
+                  >Customer Enquiry No.</label
+                >
                 <input
-                  type="text"
-                  placeholder="Name 2"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label>House & Street Name</label>
-                <input
-                  type="text"
-                  placeholder="House & Street Name"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  [(ngModel)]="customerEnquiryNo"
+                  class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="Customer Enquiry No."
                 />
               </div>
             </div>
-            <div class="space-y-6">
-              <div class="grid grid-cols-2 items-center gap-4 pl-4">
-                <label class="font-medium">Cust Price Proc</label>
-                <select
-                  data-hs-select='{
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-6">
+                <div class="grid grid-cols-2 items-center gap-4">
+                  <label class="font-medium">Customer</label>
+                  <select
+                    [(ngModel)]="selectedCustomer"
+                    (ngModelChange)="onCustomerSelect()"
+                    data-hs-select='{
+                    "hasSearch": true,
+                    "searchPlaceholder": "Search...",
+                    "searchClasses": "block w-full text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-1.5 px-2.5",
+                    "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+                    "placeholder": "Select customer...",
+                    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"me-2\" data-icon></span><span class=\"text-gray-800 \" data-title></span></button>",
+                    "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+                    "optionClasses": "py-1.5 px-3 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+                    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 dark:text-blue-500 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                    "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                  }'
+                    class="hidden"
+                  >
+                    <option value="">Choose</option>
+                    <option
+                      *ngFor="let customer of customers"
+                      [value]="customer.customernumber"
+                    >
+                      {{ customer.name }}
+                    </option>
+                  </select>
+                  <label>Customer Name 1</label>
+                  <input
+                    type="text"
+                    placeholder="Name 1"
+                    [value]="selectedCustomer ? selectedCustomer.name : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label>Customer Name 2</label>
+                  <input
+                    type="text"
+                    placeholder="Name 2"
+                    [value]="selectedCustomer ? selectedCustomer.name2 : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label>House & Street Name</label>
+                  <input
+                    type="text"
+                    placeholder="House & Street Name"
+                    [value]="selectedCustomer ? selectedCustomer.street : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                </div>
+                <div class="mt-6 grid grid-cols-2 items-center gap-4">
+                  <label class="font-medium">Ship-to</label>
+                  <select
+                    [(ngModel)]="shipToCustomer"
+                    (ngModelChange)="onShipToSelect()"
+                    data-hs-select='{
+                    "hasSearch": true,
+                    "searchPlaceholder": "Search...",
+                    "searchClasses": "block w-full text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-1.5 px-2.5",
+                    "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+                    "placeholder": "Select customer...",
+                    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"me-2\" data-icon></span><span class=\"text-gray-800 \" data-title></span></button>",
+                    "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+                    "optionClasses": "py-1.5 px-3 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+                    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 dark:text-blue-500 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                    "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                  }'
+                    class="hidden"
+                  >
+                    <option value="">Choose</option>
+                    <option
+                      *ngFor="let shipto of shipTo"
+                      [value]="shipto.customernumber"
+                    >
+                      {{ shipto.name }}
+                    </option>
+                  </select>
+                  <label>Customer Name 1</label>
+                  <input
+                    type="text"
+                    placeholder="Name 1"
+                    [value]="shipToCustomer ? shipToCustomer.name : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label>Customer Name 2</label>
+                  <input
+                    type="text"
+                    placeholder="Name 2"
+                    [value]="shipToCustomer ? shipToCustomer.name2 : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label>House & Street Name</label>
+                  <input
+                    type="text"
+                    placeholder="House & Street Name"
+                    [value]="shipToCustomer ? shipToCustomer.street : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                </div>
+              </div>
+              <div class="space-y-6">
+                <div class="grid grid-cols-2 items-center gap-4 lg:pl-4">
+                  <label class="font-medium">Cust Price Proc</label>
+                  <select
+                    [(ngModel)]="customerPriceProcedure"
+                    data-hs-select='{
                     "placeholder": "Select option...",
                     "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
                     "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 px-3 pe-9 flex text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1]",
@@ -263,528 +326,566 @@
                     "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
                     "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
                     }'
-                  class="hidden"
-                >
-                  <option value="">Choose</option>
-                  <option value="1">Is VAT Inclusive</option>
-                  <option value="2">Is VAT Exclusive</option>
-                </select>
-                <label class="font-medium">Payment Term</label>
-                <input
-                  type="text"
-                  placeholder="Payment Term"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Trading Currency</label>
-                <input
-                  type="text"
-                  placeholder="Trading Currency"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Incoterm</label>
-                <input
-                  type="text"
-                  placeholder="Incoterm"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Incoterm (Port)</label>
-                <input
-                  type="text"
-                  placeholder="Incoterm (Port)"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Delivery Date</label>
-                <input
-                  type="date"
-                  class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium mt-5">Valid From Date</label>
-                <input
-                  type="date"
-                  class="mt-5 py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Valid To Date</label>
-                <input
-                  type="date"
-                  class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="w-full mt-5">
-            <label for="textarea-label" class="block font-medium mb-2"
-              >Header Text</label
-            >
-            <textarea
-              class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
-              rows="3"
-              placeholder="Header Text ..."
-            ></textarea>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
-            <div class="space-y-6">
-              <div class="grid grid-cols-2 items-center gap-4">
-                <label class="font-medium"
-                  >Selection for Material details to be printed</label
-                >
-                <div class="space-y-1 mt-5">
-                  <div class="flex">
-                    <input
-                      type="radio"
-                      name="hs-default-radio"
-                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                      id="hs-default-radio"
-                    />
-                    <label for="hs-default-radio" class="text-sm ms-2"
-                      >Full Material Description</label
-                    >
-                  </div>
-                  <div class="flex">
-                    <input
-                      type="radio"
-                      name="hs-default-radio"
-                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                      id="hs-checked-radio"
-                      checked=""
-                    />
-                    <label for="hs-checked-radio" class="text-sm ms-2"
-                      >4 Digit Description (Text)</label
-                    >
-                  </div>
-                  <div class="flex">
-                    <input
-                      type="radio"
-                      name="hs-default-radio"
-                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                      id="hs-checked-radio"
-                      checked=""
-                    />
-                    <label for="hs-checked-radio" class="text-sm ms-2"
-                      >Basic Material (Text)</label
-                    >
-                  </div>
-                  <div class="flex">
-                    <input
-                      type="radio"
-                      name="hs-default-radio"
-                      class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                      id="hs-checked-radio"
-                      checked=""
-                    />
-                    <label for="hs-checked-radio" class="text-sm ms-2"
-                      >Drawing #</label
-                    >
-                  </div>
+                    class="hidden"
+                  >
+                    <option value="">Choose</option>
+                    <option value="1">VAT Inclusive</option>
+                    <option value="2">VAT Exclusive</option>
+                  </select>
+                  <label class="font-medium">Payment Term</label>
+                  <input
+                    type="text"
+                    placeholder="Payment Term"
+                    [value]="
+                      selectedCustomer ? selectedCustomer.termsofpayment : ''
+                    "
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Trading Currency</label>
+                  <input
+                    type="text"
+                    placeholder="Trading Currency"
+                    [value]="selectedCustomer ? selectedCustomer.currency : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Incoterm</label>
+                  <input
+                    type="text"
+                    placeholder="Incoterm"
+                    [value]="selectedCustomer ? selectedCustomer.incoterms : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Incoterm (Port)</label>
+                  <input
+                    type="text"
+                    placeholder="Incoterm (Port)"
+                    [value]="
+                      selectedCustomer ? selectedCustomer.incotermspart2 : ''
+                    "
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Delivery Date</label>
+                  <input
+                    type="date"
+                    [(ngModel)]="deliveryDate"
+                    class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium mt-5">Valid From Date</label>
+                  <input
+                    type="date"
+                    [(ngModel)]="validFromDate"
+                    class="mt-5 py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Valid To Date</label>
+                  <input
+                    type="date"
+                    [(ngModel)]="validToDate"
+                    class="py-1.5 px-2 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
                 </div>
               </div>
             </div>
-            <div class="space-y-6">
-              <div class="grid grid-cols-2 items-center gap-4">
-                <label class="font-medium">Sales Person</label>
-                <input
-                  type="text"
-                  placeholder="Sales Person"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Email</label>
-                <input
-                  type="text"
-                  placeholder="Email Address"
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
-                <label class="font-medium">Phone</label>
-                <input
-                  type="text"
-                  placeholder="Phone No."
-                  class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                />
+            <div class="w-full mt-5">
+              <label for="textarea-label" class="block font-medium mb-2"
+                >Header Text</label
+              >
+              <textarea
+                class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500"
+                rows="3"
+                placeholder="Header Text ..."
+              ></textarea>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+              <div class="space-y-6">
+                <div class="grid grid-cols-2 items-center gap-4">
+                  <label class="font-medium"
+                    >Selection for Material details to be printed</label
+                  >
+                  <div class="space-y-1 mt-5">
+                    <div class="flex">
+                      <input
+                        type="radio"
+                        name="hs-default-radio"
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        id="hs-default-radio"
+                      />
+                      <label for="hs-default-radio" class="text-sm ms-2"
+                        >Full Material Description</label
+                      >
+                    </div>
+                    <div class="flex">
+                      <input
+                        type="radio"
+                        name="hs-default-radio"
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        id="hs-checked-radio"
+                        checked=""
+                      />
+                      <label for="hs-checked-radio" class="text-sm ms-2"
+                        >4 Digit Description (Text)</label
+                      >
+                    </div>
+                    <div class="flex">
+                      <input
+                        type="radio"
+                        name="hs-default-radio"
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        id="hs-checked-radio"
+                        checked=""
+                      />
+                      <label for="hs-checked-radio" class="text-sm ms-2"
+                        >Basic Material (Text)</label
+                      >
+                    </div>
+                    <div class="flex">
+                      <input
+                        type="radio"
+                        name="hs-default-radio"
+                        class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        id="hs-checked-radio"
+                        checked=""
+                      />
+                      <label for="hs-checked-radio" class="text-sm ms-2"
+                        >Drawing #</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-6">
+                <div class="grid grid-cols-2 items-center gap-4">
+                  <label class="font-medium">Sales Person</label>
+                  <select
+                    [(ngModel)]="shipToCustomer"
+                    (ngModelChange)="onShipToSelect()"
+                    data-hs-select='{
+                    "hasSearch": true,
+                    "searchPlaceholder": "Search...",
+                    "searchClasses": "block w-full text-sm border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-1.5 px-2.5",
+                    "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+                    "placeholder": "Select customer...",
+                    "toggleTag": "<button type=\"button\" aria-expanded=\"false\"><span class=\"me-2\" data-icon></span><span class=\"text-gray-800 \" data-title></span></button>",
+                    "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-2 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+                    "optionClasses": "py-1.5 px-3 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+                    "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 dark:text-blue-500 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+                    "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+                  }'
+                    class="hidden"
+                  >
+                    <option value="">Choose</option>
+                    <option
+                      *ngFor="let employe of employee"
+                      [value]="employe.employeeno"
+                    >
+                      {{ employe.firstname }}
+                    </option>
+                  </select>
+                  <label class="font-medium">Email</label>
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    [value]="salesEmployee ? salesEmployee.emailaddress : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                  <label class="font-medium">Phone</label>
+                  <input
+                    type="text"
+                    placeholder="Phone No."
+                    [value]="salesEmployee ? salesEmployee.contactno : ''"
+                    class="py-1.5 px-4 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      data-hs-stepper-content-item='{
+      <div
+        data-hs-stepper-content-item='{
          "index": 2
          }'
-      style="display: none"
-    >
-      <div class="p-4 border border-gray-200 rounded-xl">
-        <div class="flex justify-end">
-          <button
-            type="button"
-            class="mb-5 py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-            aria-controls="hs-large-modal"
-            data-hs-overlay="#hs-large-modal"
-          >
-            Add Item
-          </button>
-        </div>
-        <div
-          id="hs-large-modal"
-          class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
-          role="dialog"
-          tabindex="-1"
-          aria-labelledby="hs-large-modal-label"
-        >
+        style="display: none"
+      >
+        <div class="p-4 border border-gray-200 rounded-xl">
+          <div class="flex justify-end">
+            <button
+              type="button"
+              class="mb-5 py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="hs-large-modal"
+              data-hs-overlay="#hs-large-modal"
+            >
+              Add Item
+            </button>
+          </div>
           <div
-            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all lg:max-w-4xl lg:w-full m-3 lg:mx-auto"
+            id="hs-large-modal"
+            class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+            role="dialog"
+            tabindex="-1"
+            aria-labelledby="hs-large-modal-label"
           >
             <div
-              class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto"
+              class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all lg:max-w-4xl lg:w-full m-3 lg:mx-auto"
             >
-              <div class="flex justify-between items-center py-3 px-4 border-b">
-                <h3 id="hs-large-modal-label" class="font-bold text-gray-800">
-                  Add Item
-                </h3>
-                <button
-                  type="button"
-                  class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
-                  aria-label="Close"
-                  data-hs-overlay="#hs-large-modal"
+              <div
+                class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto"
+              >
+                <div
+                  class="flex justify-between items-center py-3 px-4 border-b"
                 >
-                  <span class="sr-only">Close</span>
-                  <svg
-                    class="shrink-0 size-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  <h3 id="hs-large-modal-label" class="font-bold text-gray-800">
+                    Add Item
+                  </h3>
+                  <button
+                    type="button"
+                    class="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none"
+                    aria-label="Close"
+                    data-hs-overlay="#hs-large-modal"
                   >
-                    <path d="M18 6 6 18"></path>
-                    <path d="m6 6 12 12"></path>
-                  </svg>
-                </button>
-              </div>
-              <form class="p-4">
-                <div class="space-y-2">
-                  <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="mx-4">
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="material-number"
-                          class="font-medium text-gray-700 mb-1"
-                          >Material Number</label
-                        >
-                        <input
-                          type="text"
-                          id="material-number"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
+                    <span class="sr-only">Close</span>
+                    <svg
+                      class="shrink-0 size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M18 6 6 18"></path>
+                      <path d="m6 6 12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+                <form class="p-4">
+                  <div class="space-y-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                      <div class="mx-4">
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="material-number"
+                            class="font-medium text-gray-700 mb-1"
+                            >Material Number</label
+                          >
+                          <input
+                            type="text"
+                            id="material-number"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label class="font-medium text-gray-700 mb-1"
+                            >Material Description</label
+                          >
+                          <input
+                            type="text"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                            placeholder="Enter Material Description"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="per-price"
+                            class="font-medium text-gray-700 mb-1"
+                            >Per Price</label
+                          >
+                          <input
+                            type="number"
+                            id="per-price"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="per-price"
+                            class="font-medium text-gray-700 mb-1"
+                            >Per</label
+                          >
+                          <input
+                            type="number"
+                            id="per"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="uom"
+                            class="font-medium text-gray-700 mb-1"
+                            >UOM</label
+                          >
+                          <input
+                            type="text"
+                            id="uom"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
                       </div>
-                      <div class="flex flex-col mt-2">
-                        <label class="font-medium text-gray-700 mb-1"
-                          >Material Description</label
-                        >
-                        <input
-                          type="text"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                          placeholder="Enter Material Description"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="per-price"
-                          class="font-medium text-gray-700 mb-1"
-                          >Per Price</label
-                        >
-                        <input
-                          type="number"
-                          id="per-price"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="per-price"
-                          class="font-medium text-gray-700 mb-1"
-                          >Per</label
-                        >
-                        <input
-                          type="number"
-                          id="per"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label for="uom" class="font-medium text-gray-700 mb-1"
-                          >UOM</label
-                        >
-                        <input
-                          type="text"
-                          id="uom"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                    </div>
-                    <div class="mx-4">
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="discount-value"
-                          class="font-medium text-gray-700 mb-1"
-                          >Discount Value</label
-                        >
-                        <input
-                          type="number"
-                          id="discount-value"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="surcharge-value"
-                          class="font-medium text-gray-700 mb-1"
-                          >Surcharge Value</label
-                        >
-                        <input
-                          type="number"
-                          id="surcharge-value"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="order-quantity"
-                          class="font-medium text-gray-700 mb-1"
-                          >Order Quantity</label
-                        >
-                        <input
-                          type="number"
-                          id="order-quantity"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="order-value"
-                          class="font-medium text-gray-700 mb-1"
-                          >Order Value</label
-                        >
-                        <input
-                          type="number"
-                          id="order-value"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="item-text"
-                          class="font-medium text-gray-700 mb-1"
-                          >Item Text</label
-                        >
-                        <input
-                          type="number"
-                          id="item-text"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        />
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="item-text"
-                          class="font-medium text-gray-700 mb-1"
-                          >Usage</label
-                        >
-                        <select
-                          id="usage"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        >
-                          <option value="regular">AP0</option>
-                          <option value="regular">AP1</option>
-                        </select>
-                      </div>
-                      <div class="flex flex-col mt-2">
-                        <label
-                          for="item-text"
-                          class="font-medium text-gray-700 mb-1"
-                          >Project Id</label
-                        >
-                        <select
-                          id="usage"
-                          class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
-                        >
-                          <option value="regular">1</option>
-                          <option value="regular">2</option>
-                        </select>
+                      <div class="mx-4">
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="discount-value"
+                            class="font-medium text-gray-700 mb-1"
+                            >Discount Value</label
+                          >
+                          <input
+                            type="number"
+                            id="discount-value"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="surcharge-value"
+                            class="font-medium text-gray-700 mb-1"
+                            >Surcharge Value</label
+                          >
+                          <input
+                            type="number"
+                            id="surcharge-value"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="order-quantity"
+                            class="font-medium text-gray-700 mb-1"
+                            >Order Quantity</label
+                          >
+                          <input
+                            type="number"
+                            id="order-quantity"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="order-value"
+                            class="font-medium text-gray-700 mb-1"
+                            >Order Value</label
+                          >
+                          <input
+                            type="number"
+                            id="order-value"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="item-text"
+                            class="font-medium text-gray-700 mb-1"
+                            >Item Text</label
+                          >
+                          <input
+                            type="number"
+                            id="item-text"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          />
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="item-text"
+                            class="font-medium text-gray-700 mb-1"
+                            >Usage</label
+                          >
+                          <select
+                            id="usage"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          >
+                            <option value="regular">AP0</option>
+                            <option value="regular">AP1</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-col mt-2">
+                          <label
+                            for="item-text"
+                            class="font-medium text-gray-700 mb-1"
+                            >Project Id</label
+                          >
+                          <select
+                            id="usage"
+                            class="py-1.5 px-2.5 block w-full border border-gray-200 rounded text-sm focus:border-blue-500 focus:ring-blue-500"
+                          >
+                            <option value="regular">1</option>
+                            <option value="regular">2</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </form>
+                <div
+                  class="flex justify-end items-center gap-x-2 py-3 px-4 border-t"
+                >
+                  <button
+                    type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                    data-hs-overlay="#hs-large-modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                  >
+                    Save changes
+                  </button>
                 </div>
-              </form>
-              <div
-                class="flex justify-end items-center gap-x-2 py-3 px-4 border-t"
-              >
-                <button
-                  type="button"
-                  class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-                  data-hs-overlay="#hs-large-modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                >
-                  Save changes
-                </button>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex flex-col">
-          <div class="-m-1.5 overflow-x-auto">
-            <div class="p-1.5 min-w-full inline-block align-middle">
-              <div class="border rounded-lg overflow-hidden">
-                <table class="min-w-full divide-y divide-gray-200">
-                  <thead class="bg-gray-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Item
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Material Number
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Material Description
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Per Price
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Per
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        UOM
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Discount Value
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Surcharge Value
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Order Quantity
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Order Value
-                      </th>
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Item Text
-                      </th>
-                      <!-- <th
+          <div class="flex flex-col">
+            <div class="-m-1.5 overflow-x-auto">
+              <div class="p-1.5 min-w-full inline-block align-middle">
+                <div class="border rounded-lg overflow-hidden">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Item
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Material Number
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Material Description
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Per Price
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Per
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          UOM
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Discount Value
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Surcharge Value
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Order Quantity
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Order Value
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Item Text
+                        </th>
+                        <!-- <th
                         scope="col"
                         class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase"
                       >
                         Usage
                       </th> -->
-                      <th
-                        scope="col"
-                        class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase"
-                      >
-                        Action
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-200">
-                    <!-- Example Row -->
-                    <tr>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"
-                      >
-                        1
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        MAT123456
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        Material Description
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        $100.00
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        Each
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        Piece
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        $10.00
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        $5.00
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        10
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        $150.00
-                      </td>
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
-                      >
-                        This is item text
-                      </td>
-                      <!-- <td
+                        <th
+                          scope="col"
+                          class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase"
+                        >
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <!-- Example Row -->
+                      <tr>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"
+                        >
+                          1
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          MAT123456
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          Material Description
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          $100.00
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          Each
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          Piece
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          $10.00
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          $5.00
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          10
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          $150.00
+                        </td>
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
+                        >
+                          This is item text
+                        </td>
+                        <!-- <td
                         class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"
                       >
                         <select
@@ -795,108 +896,109 @@
                           <option value="backup">Backup</option>
                         </select>
                       </td> -->
-                      <td
-                        class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"
-                      >
-                        <button
-                          type="button"
-                          class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none"
+                        <td
+                          class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium"
                         >
-                          Edit
-                        </button>
-                        |
-                        <button
-                          type="button"
-                          class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                          <button
+                            type="button"
+                            class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none"
+                          >
+                            Edit
+                          </button>
+                          |
+                          <button
+                            type="button"
+                            class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-none focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none"
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      data-hs-stepper-content-item='{
+      <div
+        data-hs-stepper-content-item='{
          "index": 3
          }'
-      style="display: none"
-    >
-      <div
-        class="p-4 h-48 bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl"
-      >
-        <h3 class="text-gray-500">Third content</h3>
-      </div>
-    </div>
-    <div
-      data-hs-stepper-content-item='{
-         "index": 4
-         }'
-      style="display: none"
-    >
-      <div
-        class="p-4 h-48 bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl"
-      >
-        <h3 class="text-gray-500">Fourth content</h3>
-      </div>
-    </div>
-    <div class="mt-5 flex justify-between items-center gap-x-2">
-      <button
-        type="button"
-        class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
-        data-hs-stepper-back-btn=""
-      >
-        <svg
-          class="shrink-0 size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m15 18-6-6 6-6"></path>
-        </svg>
-        Back
-      </button>
-      <button
-        type="button"
-        class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-        data-hs-stepper-next-btn=""
-      >
-        Next
-        <svg
-          class="shrink-0 size-4"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
-      </button>
-      <button
-        (click)="reload()"
-        type="button"
-        class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-        data-hs-stepper-finish-btn=""
         style="display: none"
       >
-        Create New Quote
-      </button>
+        <div
+          class="p-4 h-48 bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl"
+        >
+          <h3 class="text-gray-500">Third content</h3>
+        </div>
+      </div>
+      <div
+        data-hs-stepper-content-item='{
+         "index": 4
+         }'
+        style="display: none"
+      >
+        <div
+          class="p-4 h-48 bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl"
+        >
+          <h3 class="text-gray-500">Fourth content</h3>
+        </div>
+      </div>
+      <div class="mt-5 flex justify-between items-center gap-x-2">
+        <button
+          type="button"
+          class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+          data-hs-stepper-back-btn=""
+        >
+          <svg
+            class="shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          Back
+        </button>
+        <button
+          type="button"
+          class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+          data-hs-stepper-next-btn=""
+        >
+          Next
+          <svg
+            class="shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m9 18 6-6-6-6"></path>
+          </svg>
+        </button>
+        <button
+          (click)="reload()"
+          type="button"
+          class="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+          data-hs-stepper-finish-btn=""
+          style="display: none"
+        >
+          Create New Quote
+        </button>
+      </div>
     </div>
   </div>
-</div>
+</ng-template>
