@@ -13,8 +13,6 @@ export class AllComponent {
       customerName: 'Acme Corp',
       validFrom: '2024-01-01',
       validTo: '2024-12-31',
-      country: 'USA',
-      currency: 'USD',
       status: 'approved',
     },
     {
@@ -22,8 +20,6 @@ export class AllComponent {
       customerName: 'TechGlobal Ltd',
       validFrom: '2024-02-01',
       validTo: '2024-07-31',
-      country: 'UK',
-      currency: 'GBP',
       status: 'pending',
     },
     {
@@ -31,8 +27,6 @@ export class AllComponent {
       customerName: 'Euro Solutions',
       validFrom: '2024-03-01',
       validTo: '2024-08-31',
-      country: 'Germany',
-      currency: 'EUR',
       status: 'rejected',
     },
   ]

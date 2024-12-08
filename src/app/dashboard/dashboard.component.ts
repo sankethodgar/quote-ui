@@ -7,15 +7,21 @@ import {
   RouterOutlet,
 } from '@angular/router'
 
+import { AuthService } from '../auth.service'
+
 @Component({
   selector: 'app-dashboard',
-  imports: [NgClass, RouterLink, RouterOutlet],
   templateUrl: './dashboard.component.html',
+  imports: [NgClass, RouterLink, RouterOutlet],
 })
 export class DashboardComponent {
   currentRoute: string = ''
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private authService: AuthService
+  ) {
     this.router.events.subscribe(() => {
       this.currentRoute = this.router.url
     })
@@ -23,5 +29,10 @@ export class DashboardComponent {
 
   isActive(link: string): boolean {
     return this.currentRoute.includes(link)
+  }
+
+  logout(): void {
+    this.authService.logout()
+    this.router.navigate(['/'])
   }
 }

@@ -29,10 +29,14 @@ export type ChartOptions = {
 })
 export class HomeComponent {
   stats = [
-    { label: 'All Quotes', value: '92,913' },
-    { label: 'Pending', value: '913' },
-    { label: 'Approved', value: '2,913' },
-    { label: 'Rejected', value: '213' },
+    { label: 'Draft', value: '1,000' },
+    { label: 'Submitted for approval', value: '2,000' },
+    { label: 'Approved', value: '3,000' },
+    { label: 'Rejected', value: '4,000' },
+    { label: 'Submitted to customer', value: '5,000' },
+    { label: 'Won', value: '6,000' },
+    { label: 'Loss', value: '7,000' },
+    { label: 'Cancelled', value: '8,000' },
   ]
 
   @ViewChild(ChartComponent) chart!: ChartComponent
