@@ -406,6 +406,8 @@
                       <input
                         type="radio"
                         name="hs-default-radio"
+                        [(ngModel)]="selectedDescription"
+                        value="Full Material Description"
                         class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         id="hs-default-radio"
                       />
@@ -417,6 +419,8 @@
                       <input
                         type="radio"
                         name="hs-default-radio"
+                        [(ngModel)]="selectedDescription"
+                        value="4 Digit Description (Text)"
                         class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         id="hs-checked-radio"
                         checked=""
@@ -429,6 +433,8 @@
                       <input
                         type="radio"
                         name="hs-default-radio"
+                        [(ngModel)]="selectedDescription"
+                        value="Basic Material (Text)"
                         class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         id="hs-checked-radio"
                         checked=""
@@ -441,6 +447,8 @@
                       <input
                         type="radio"
                         name="hs-default-radio"
+                        [(ngModel)]="selectedDescription"
+                        value="Drawing #"
                         class="shrink-0 mt-0.5 border-gray-200 rounded-full text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                         id="hs-checked-radio"
                         checked=""
@@ -456,8 +464,8 @@
                 <div class="grid grid-cols-2 items-center gap-4">
                   <label class="font-medium">Sales Person</label>
                   <select
-                    [(ngModel)]="shipToCustomer"
-                    (ngModelChange)="onShipToSelect()"
+                    [(ngModel)]="salesEmployee"
+                    (ngModelChange)="onSalesEmployeeSelect()"
                     data-hs-select='{
                     "hasSearch": true,
                     "searchPlaceholder": "Search...",
@@ -497,6 +505,12 @@
                   />
                 </div>
               </div>
+              <button
+                (click)="onStep1Submit()"
+                class="py-2 px-4 bg-blue-600 text-white rounded-md"
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>
